@@ -2,12 +2,35 @@
 <html>
 <head>
     <title>My First Web Page</title>
+    <style>
+        #imageContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function changeImage(imageUrl) {
+            document.getElementById('mainImage').src = imageUrl;
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome to My Web Page</h1>
     <h2>About Me</h2>
     <p>I'm a high school student and wanting to learn more about programming.</p>
     
-    <h2>Click on the buttons to change the image shown: </h2>
+    <h2>Click on the buttons to change the image shown:</h2>
+    <div id="imageContainer">
+        <img id="mainImage" src="https://via.placeholder.com/400x300" alt="Image" width="400" height="300">
+    </div>
+    <div id="buttonContainer">
+        <button onclick="changeImage('https://via.placeholder.com/400x300')">Grey Rectangle</button>
+        <button onclick="changeImage('https://via.placeholder.com/400x300/ff0000')">Red Rectangle</button>
+        <button onclick="changeImage('https://via.placeholder.com/400x300/00ff00')">Green Rectangle</button>
+        <button onclick="changeImage('https://via.placeholder.com/400x300/0000ff')">Blue Rectangle</button>
+    </div>
 </body>
 </html>
